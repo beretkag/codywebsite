@@ -1,0 +1,76 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1b1b1b;
+  color: #f0d86a;
+}
+header.hero {
+  background-color: #000;
+  text-align: center;
+  padding: 2rem;
+}
+header.hero img.logo {
+  max-width: 200px;
+}
+
+header.hero h1, p{
+  font-family: Cambria;
+  letter-spacing: 1px;
+  font-weight:bolder;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  background-image: url("./images/nav_bg.png");
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+}
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+nav ul li a:hover{
+  color: #ffde49;
+}
+section {
+  padding: 2rem;
+}
+
+section ul{
+  list-style: none;
+  padding-left: 0;
+}
+section ul li{
+  background-image: url('./images/gl_icon.png'); /* a saját képed útvonala */
+  background-repeat: no-repeat;
+  background-size: 16px 16px; /* ⬅️ Itt adod meg a MÉRETET */
+  background-position: 0 4px;
+  padding-left: 24px; /* legyen hely a szöveg előtt */
+  margin-bottom: 0.5rem;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.gallery img {
+  max-width: 100%;
+  border: 2px solid #f0d86a;
+  border-radius: 8px;
+}
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
