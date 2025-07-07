@@ -20,10 +20,9 @@
 
         <hr>
         <nav>
-            <div class="nav-item">Rólunk</div>
-            <div class="nav-item">Küldetések</div>
+            <a href="#Rolunk" onclick="ExpandCard(0)"><div class="nav-item">Rólunk</div></a>
+            <a href="#Kuldetesek" onclick="ExpandCard(1)"><div class="nav-item">Küldetések</div></a>
             <div class="nav-item">Galéria</div>
-            <div class="nav-item">Loadout</div>
         </nav>
         <hr>
 
@@ -36,7 +35,7 @@
 
         <div class="button-line">
             <div class="button">CSATLAKOZZ</div>
-            <div class="button">TUDJ MEG TÖBBET</div>
+            <div class="button" onclick="OpenModal()">TUDJ MEG TÖBBET</div>
         </div>
 
         <div class="card-line">
@@ -47,16 +46,28 @@
                 <div class="closeBtn">X</div>
                 
                 <img src="./images/flag.png" alt="Rólunk">
-                <h4>Rólunk</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium ut veritatis eligendi architecto molestiae aspernatur nulla. Cumque dolore ullam nobis repellat ut. Iste architecto cumque assumenda eos aliquid modi quidem.</p>
+                <h4 id="Rolunk">Rólunk</h4>
+                <p>
+                    Mi egy <strong>magyar Helldivers 2 légió</strong> vagyunk!<br>
+                    Szívesen látunk minden <strong>kezdőt, haladót</strong> és <strong>veteránt</strong> egyaránt!<br><br>
+                    Legyél <strong>aktív</strong> vagy <strong>visszatérő</strong> játékos, <strong>itt a helyed!</strong>
+                </p>
             </div>
 
             <div class="card">
                 <div class="closeBtn">X</div>
 
                 <img src="./images/helmet.png" alt="Küldetések">
-                <h4>Küldetések</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, eum. Perspiciatis temporibus suscipit est debitis accusantium repellat modi cumque non, asperiores odit facere consequuntur ducimus a tempore porro pariatur adipisci.</p>
+                <h4 id="Kuldetesek">Küldetések</h4>
+                <p>
+                    <strong>SZEKTOR:.</strong> MARSPIRA<br>
+                    <strong>BOLYGÓ:.</strong> CURIA<br><br>
+
+                    Az <strong>Arany Légió</strong> résztvett a <strong>kulcsfontosságú bolygó</strong> visszafoglalásában!<br>
+                    Légiósaink <strong>hősiesen</strong> küzdöttek, vért s egyebet nem sajnálva!<br><br>
+
+                    Velük , miattuk, immáron <strong>aranyban úszik a szektor!</strong> <br>
+                </p>
             </div>
 
             <div class="card">
@@ -71,6 +82,14 @@
 
     </main>
 
+    
+    
+    <div class="modal-fade d-none">
+        <div class="modal">
+            <div class="closeBtn" style="display: block;">X</div>
+        </div>
+    </div>
     <script src="./card_expand.js"></script>
+    <script src="./modal.js"></script>
 </body>
 </html>
