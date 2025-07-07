@@ -97,18 +97,26 @@ main{
 .card-line{
     display: flex;
     justify-content: center;
+    transition: 5s;
+    position: relative;
 }
 
 .card-line .card{
     display: flex;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    width: calc(90vw / 4 - 2vw);
+    width: calc(90vw / 5);
     height: 20vw;
     border: 1px solid #fffff4;
     border-radius: 1vw;
     margin: 2vw 2vw;
     padding: 1vw;
+    z-index: 1;
+    transition: width 0.5s ease;
+    background-color: #01060A;
+    position: relative;
+    cursor: pointer;
 }
 
 .card-line .card img{
@@ -127,6 +135,40 @@ main{
     color: #fffff4;
     font-size: 1.2vw;
     text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease 2s;
 }
+
+.card-line .card:active{
+    z-index: 2;
+}
+
+.card-line .expandedCard{
+    width: 80vw;
+    height: 20vw;
+}
+
+.card-line .expandedCard p{
+    display: block;
+    opacity: 1;
+}
+
+.card-line .expandedCard .closeBtn{
+   display: block;
+   height:fit-content
+}
+
+.closeBtn{
+    position:absolute;
+    top:0;
+    right: 0;
+    color: #fffff486;
+    font-size: 2.4vw;
+    cursor: pointer;
+    padding: 0 1vw;
+    display: none;
+}
+
+
+
